@@ -79,10 +79,11 @@ class EmpleadosController extends Controller
      */
     public function edit($id)
     {
-        //
+        //Encontramos el empleado especifico del ID
         $empleado = Empleados::findOrFail($id);
 
-        return view('empleado.edit', compact('empleado'));
+        //Retornamos la vista para editar el empleado con datos de ese empleado
+        return view('empleados.edit', compact('empleado'));
     }
 
     /**
